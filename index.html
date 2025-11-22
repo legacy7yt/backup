@@ -10,7 +10,7 @@ body {
     text-align: center;
 }
 
-/* زر تحميل */
+/* زر تحميل كبير */
 #downloadBtn {
     display: inline-block;
     margin: 40px auto 20px auto;
@@ -25,11 +25,10 @@ body {
     background-color: #45a049;
 }
 
-/* iframe Excel كبير وواضح */
+/* iframe Excel كبير جداً */
 .iframe-container {
     width: 100%;
-    max-width: 1600px; /* أقصى عرض للكمبيوتر */
-    height: 900px;      /* ارتفاع كبير ليكون واضح */
+    height: 1200px; /* ارتفاع كبير جداً لعرض كل الملف بشكل واضح */
     margin: 20px auto;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -41,9 +40,9 @@ body {
 <!-- زر تحميل الملف -->
 <a id="downloadBtn" href="https://legacy7yt.github.io/backup/DAILY%20REPORT.xlsx" download>تحميل ملف Excel</a>
 
-<!-- عرض الملف أسفل الزر -->
+<!-- عرض الملف أسفل الزر بحجم كبير -->
 <div class="iframe-container">
-    <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://legacy7yt.github.io/backup/DAILY%20REPORT.xlsx"></iframe>
+    <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://legacy7yt.github.io/backup/DAILY%20REPORT.xlsx" width="100%" height="100%"></iframe>
 </div>
 
 </body>
