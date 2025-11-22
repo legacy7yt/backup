@@ -2,56 +2,46 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>عرض وتحميل ملف Excel</title>
+<title>تحميل وعرض ملف Excel</title>
 <style>
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
     text-align: center;
 }
-h2 {
-    margin-bottom: 20px;
-}
-
-/* iframe Excel */
-.iframe-container {
-    width: 100%;
-    max-width: 1200px;
-    height: 600px;
-    margin: 20px auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
 
 /* زر تحميل */
 #downloadBtn {
     display: inline-block;
-    margin: 20px auto;
-    padding: 20px 40px;
-    font-size: 22px;
+    margin: 40px auto 20px auto;
+    padding: 25px 50px;
+    font-size: 26px;
     background-color: #4CAF50;
     color: white;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 #downloadBtn:hover {
     background-color: #45a049;
+}
+
+/* iframe Excel كبير وواضح */
+.iframe-container {
+    width: 100%;
+    max-width: 1600px; /* أقصى عرض للكمبيوتر */
+    height: 900px;      /* ارتفاع كبير ليكون واضح */
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 </style>
 </head>
 <body>
 
-<h2>عرض ملف Excel</h2>
-
-<!-- العرض الأول -->
-<div class="iframe-container">
-    <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://legacy7yt.github.io/backup/DAILY%20REPORT.xlsx"></iframe>
-</div>
-
 <!-- زر تحميل الملف -->
 <a id="downloadBtn" href="https://legacy7yt.github.io/backup/DAILY%20REPORT.xlsx" download>تحميل ملف Excel</a>
 
-<!-- العرض الثاني أسفل الزر -->
+<!-- عرض الملف أسفل الزر -->
 <div class="iframe-container">
     <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://legacy7yt.github.io/backup/DAILY%20REPORT.xlsx"></iframe>
 </div>
