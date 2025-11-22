@@ -2,26 +2,44 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>عرض ملف Excel</title>
+<title>عرض ملف Excel متجاوب</title>
 <style>
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     margin: 20px;
 }
-iframe {
+h2 {
+    text-align: center;
+}
+
+/* صندوق iframe متجاوب */
+.iframe-container {
+    position: relative;
     width: 100%;
-    height: 800px;
+    padding-bottom: 75%; /* نسبة ارتفاع تقريبة */
+    height: 0;
+    overflow: hidden;
     border: 1px solid #ccc;
     border-radius: 8px;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 </style>
 </head>
 <body>
 
-<h2>عرض ملف Excel مباشرة</h2>
+<h2>عرض ملف Excel متجاوب</h2>
 
-<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://legacy7yt.github.io/backup/DAILY%20REPORT.xlsx" frameborder="0"></iframe>
+<div class="iframe-container">
+    <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://username.github.io/repository-name/files/your-file.xlsx"></iframe>
+</div>
 
 </body>
 </html>
