@@ -4,46 +4,87 @@
 <meta charset="UTF-8">
 <title>تحميل وعرض ملف Excel</title>
 <style>
+/* خلفية رسمية */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0f0ff, #c0e0ff);
+    color: #333;
     text-align: center;
 }
 
-/* زر تحميل كبير وواضح */
+/* العنوان */
+h2 {
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: #0a3d62;
+}
+
+/* زر التحميل */
 #downloadBtn {
-    display: inline-block;
-    margin: 40px auto 20px auto;
-    padding: 25px 50px;
-    font-size: 26px;
-    background-color: #4CAF50;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px auto 40px auto;
+    padding: 20px 50px;
+    font-size: 24px;
+    background-color: rgba(0, 123, 255, 0.7); /* شبه شفاف */
     color: white;
     text-decoration: none;
     border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s;
 }
 #downloadBtn:hover {
-    background-color: #45a049;
+    background-color: rgba(0, 123, 255, 0.9);
 }
 
-/* iframe Excel كبير */
+/* أيقونة Excel في الزر */
+#downloadBtn img {
+    width: 30px;
+    height: 30px;
+}
+
+/* iframe Excel */
 .iframe-container {
-    width: 100%;
-    height: 1200px; /* ارتفاع كبير للعرض الكامل */
-    margin: 20px auto;
+    width: 95%;
+    max-width: 1600px;
+    height: 1200px;
+    margin: 0 auto 50px auto;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* تذييل الصفحة */
+footer {
+    font-size: 16px;
+    color: #0a3d62;
+    margin: 40px 0 20px 0;
 }
 </style>
 </head>
 <body>
 
-<!-- زر تحميل الملف في الأعلى -->
-<a id="downloadBtn" href="https://legacy7yt.github.io/backup/DAILY%20REPORT.xlsx" download>تحميل ملف Excel</a>
+<h2>ملف Excel اليومي</h2>
+
+<!-- زر التحميل مع أيقونة Excel -->
+<a id="downloadBtn" href="https://legacy7yt.github.io/backup/DAILY%20REPORT.xlsx" download>
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" alt="Excel"> تحميل ملف Excel
+</a>
 
 <!-- عرض الملف أسفل الزر -->
 <div class="iframe-container">
     <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://legacy7yt.github.io/backup/DAILY%20REPORT.xlsx" width="100%" height="100%"></iframe>
 </div>
+
+<!-- تذييل الصفحة -->
+<footer>
+    تصميم: أحمد الرتيمي | إشراف: محمد بلخير
+</footer>
 
 </body>
 </html>
