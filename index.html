@@ -78,13 +78,20 @@ footer {
 
 <!-- عرض الملف أسفل الزر -->
 <div class="iframe-container">
-    <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://legacy7yt.github.io/backup/DAILY%20REPORT.xlsx" width="100%" height="100%"></iframe>
+    <iframe id="excelIframe" width="100%" height="100%"></iframe>
 </div>
 
 <!-- تذييل الصفحة -->
 <footer>
     تصميم: أحمد الرتيمي | إشراف: محمد بلخير
 </footer>
+
+<script>
+// إضافة Timestamp ديناميكي لتجنب الكاش
+const iframe = document.getElementById('excelIframe');
+const timestamp = new Date().getTime(); // رقم الوقت الحالي بالميلي ثانية
+iframe.src = `https://view.officeapps.live.com/op/embed.aspx?src=https://legacy7yt.github.io/backup/DAILY%20REPORT.xlsx?ver=${timestamp}`;
+</script>
 
 </body>
 </html>
